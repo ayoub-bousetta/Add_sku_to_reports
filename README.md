@@ -18,6 +18,14 @@ npm install
 npm start
 ```
 
+## Non developers
+
+<ol>
+  <li><a href="https://github.com/ayoub-bousetta/add_sku_to_reports/raw/main/add_sku_to_reports.zip">Donload from here</a></li>
+  <li><p>Navigate to Admin -> Plugins -> Add new -> Upload the .zip -> Activate the plugin </p></li>
+
+</ol>
+
 
 ## Credits.
 

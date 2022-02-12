@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: add_sku_to_reports
- * Plugin URI: http://abusta.com
+ * Plugin URI: https://wordpress.org/plugins/add_sku_to_reports
  * Description: A WooCommerce Admin Extension to add sku(s) to the analytics table reports woocommerce (Analytics -> Orders)
  * Version: 1.0.0
  * Author: Ayoub Bousetta

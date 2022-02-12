@@ -10,14 +10,15 @@ const addTableColumn = reportTableData => {
 
     const newHeaders = [
         ...reportTableData.headers,
+
         {
             label: __( 'SKU', 'woocommerce' ),
             key: 'products_sku',
             required: false,
-            
+
         },
     ];
-  console.log(newHeaders);
+  
     const newRows = reportTableData.rows.map((row, index) => {
         const item = reportTableData.items.data[index];
 
@@ -30,6 +31,10 @@ const addTableColumn = reportTableData => {
             },
         ];
         return newRow;
+
+
+	
+
     });
 
     reportTableData.headers = newHeaders;

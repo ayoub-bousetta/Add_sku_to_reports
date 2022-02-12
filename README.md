@@ -1,6 +1,13 @@
-# add_sku_to_reports
+## About the Plugin
 
-A WooCommerce Admin Extension
+A WooCommerce Admin Extension to add sku(s) to the analytics table reports woocommerce (Analytics -> Orders)
+
+## Screenshots.
+
+<b>Analytics -> Orders</b>
+
+![Orders Page](https://i.imgur.com/b6hVqDi.png)
+
 
 ## Development
 
@@ -11,5 +18,13 @@ npm install
 npm start
 ```
 
-See [wp-scripts](https://github.com/WordPress/gutenberg/tree/master/packages/scripts) for more usage information.
+
+## Credits.
+
+<dl>
+  <dt>Ayoub Bousetta</dt>
+  <dd><a href="https://abusta.com">abusta.com</a></dd>
+
+</dl>
+
 

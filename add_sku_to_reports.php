@@ -76,9 +76,14 @@ add_filter('woocommerce_analytics_orders_select_query', function ($results, $arg
 				// Loop through ordered items
 			 $order = new WC_Order($result['order_id']);
     $items = $order->get_items();
+        $shippingrate=$order->get_shipping_total();
 
     // Loop through each item of the order
     foreach ( $items as $item ) {
+
+
+
+
         $product_variation_id = $item['variation_id'];
 
         if ($product_variation_id) { // IF Order Item is Product Variantion then get Variation Data instead
@@ -98,6 +103,7 @@ add_filter('woocommerce_analytics_orders_select_query', function ($results, $arg
             
             //here is how i did it for the customers SKU number
             $results->data[$key]['products_sku'] = implode(" - ", $item_sku);
+            $results->data[$key]['products_shipping'] = wc_format_decimal($shippingrate, 2 );
         }
     }
 
@@ -112,6 +118,7 @@ add_filter('woocommerce_analytics_orders_select_query', function ($results, $arg
  */
 add_filter('woocommerce_report_orders_export_columns', function ($export_columns){
     $export_columns['products_sku'] = _e( 'SKU', 'woocommerce' );
+    $export_columns['products_shipping'] = _e( 'Shipping', 'woocommerce' );
     return $export_columns;
 });
 
@@ -123,6 +130,7 @@ add_filter('woocommerce_report_orders_export_columns', function ($export_columns
  */
 add_filter('woocommerce_report_orders_prepare_export_item', function ($export_item, $item){
     $export_item['products_sku'] = $item['products_sku'];
+    $export_item['products_shipping'] = $item['products_shipping'];
     return $export_item;
 }, 10, 2);
 

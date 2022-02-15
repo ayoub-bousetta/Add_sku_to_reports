@@ -17,6 +17,12 @@ const addTableColumn = reportTableData => {
             required: false,
 
         },
+        {
+            label: __( 'Shipping', 'woocommerce' ),
+            key: 'products_shipping',
+            required: false,
+
+        },
     ];
   
     const newRows = reportTableData.rows.map((row, index) => {
@@ -28,6 +34,10 @@ const addTableColumn = reportTableData => {
             {
                 display: item.products_sku,
                 value: item.products_sku,
+            },
+            {
+                display: item.products_shipping,
+                value: item.products_shipping,
             },
         ];
         return newRow;
